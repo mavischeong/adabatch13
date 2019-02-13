@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Local and Global Scope</title>
+</head>
+<body>
+	<script>
+		var a = "global";
+
+		function f(){
+			a = "local a";
+			console.log(a);
+				function g(){
+					var a = "local to g()";
+					console.log(a);
+				}
+				g();
+			
+		}
+
+		f();
+		console.log(a);
+
+	</script>
+
+</body>
+</html>

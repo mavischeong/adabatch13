@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Creating Object COnstructor</title>
+</head>
+<body>
+<script>
+	function Hotel(name,rooms,booked){//under Object Constructor, the value (which is Hotel) has to be at capital letter
+		this.name = name;
+		this.rooms = rooms;
+		this.booked = booked;
+		this.checkAvailability = function(){
+			return this.rooms - this.booked;
+		}
+	}
+
+	var quayHotel = new Hotel("Quay",40,60);
+	var parkHotel = new Hotel("Park",50,80);
+
+	parkHotel.swimmingPool = true; //add like this when we want to add more feature for only this hotel
+
+	console.log(quayHotel)
+	console.log(parkHotel)
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Creating an Object - Literal Notation</title>
+</head>
+<body>
+<script>
+	var hotel = {
+		name:"Quay",
+		rooms:40,
+		booked:30,
+		checkAvailability:function(){
+			return this.rooms - this.booked;
+		}
+	}
+
+	console.log(hotel);
+	console.log(hotel.name);
+	console.log(hotel.checkAvailability());
+</script>
+</body>
+</html>

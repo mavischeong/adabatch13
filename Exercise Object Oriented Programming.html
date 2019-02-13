@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Exercise: Object Oriented Programming</title>
+</head>
+
+<body>
+	<input type="text" name="bookname" Id="bookTitle">
+	<button onclick="Book">Add Book</button>
+	<p Id = "answer"></p>
+
+<script>
+	function Book(bookTitle, author, page){ //creating class; which is "this.xxx"
+		this.bookTitle = bookTitle;
+		this.author = author;
+		this.page = page;
+
+		this.bookRead = function(){
+			return ++this.page;
+		}
+
+		this.bookBuy = function(){
+			return this.bookTitle + ", by " + this.author + " has been purchased! "; //create sentense at "return"
+		}
+	}
+		var abcBook = new Book("ABC", "Mavis", 160);
+
+		console.log(abcBook);
+		console.log(abcBook.bookRead()); //console.log("Read var"."class")
+		console.log(abcBook.bookBuy()); //when read "class", must include the bracket again
+
+</script>
+</body>
+</html>

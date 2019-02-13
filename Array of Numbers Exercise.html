@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Array of Numbers Exercise</title>
+</head>
+<body>
+	<input type="text" name="numbers" id="numbers">
+	<button onclick="getNumbers()">Click Me</button>
+	<p id="answer"></p>
+
+	<script>
+		function getNumbers(){
+			var nString = document.getElementById("numbers").value;//these input are basically sentense as the input type is "text".
+			var stringArray = nString.split(",");//this is to convert sentences to numbers in string. in console log you will see each numbers are "".
+			var numberArray = stringArray.map(function(x){
+				return Number(x);
+				});//this is to convert numbers in string become a real number as number in string is a string.
+			console.log(numberArray);
+			var average = getAverage(numberArray);
+			document.getElementById("answer").innerHTML = average;
+			}
+		
+		function getAverage (numberArray){
+			var sum = 0;
+			for (var i=0;i<numberArray.length;i++){
+				sum+=array[i];
+			}
+				return sum/numberArray.length;
+		}
+	</script>
+</body>
+</html>
