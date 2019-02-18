@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mouse Event Listener - Method 2</title>
+</head>
+<body>
+	<img id = "image" src="https://313ct818yszd3xd6xa2z47nm-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/ab-1240x833.jpg">
+
+	<script>
+		var img = document.getElementById("image");
+		img.onmouseover = mouse_over;
+
+		img.onclick = mouse_click;
+
+		img.ondblclick = double_click;
+
+		img.onmouseout = mouse_out;
+
+		function mouse_click(){
+			console.log("mouse_click"); 
+		}
+
+		function mouse_over(){
+			console.log("mouse_over");
+		}
+
+		function double_click(){
+			console.log("double_click");
+		}
+
+		function mouse_out(){
+			console.log("mouse_out");
+		}
+	
+
+		//another method to do Mouse Event Listener
+	</script>
+</body>

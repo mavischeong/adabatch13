@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>DOM Manipulation - My To Do List</title>
+</head>
+<body>
+<h1>My To Do List</h1>
+<label for="item">Enter a new item:</label>
+<input type="text" name="item" id="item">
+<button onclick="add_item()">Add Item</button>
+<ul id="lists"></ul>
+
+<script>
+	function add_item(){
+		var item_name = document.getElementById("item").value; //we need to add .value here as we need to get the value of what user typed in. if only put "item", it will only select the kotak, but not the value inside. need to be very detail
+		var list = document.getElementById("lists");
+
+		var node = document.createElement("li");
+		node.innerHTML = item_name + " <button>delete/edit</button>";
+		list.appendChild(node);
+
+	function delete_item(){
+		
+
+	}
+	}
+</script>
+</body>
+</html>

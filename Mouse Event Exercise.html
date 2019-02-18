@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mouse Event Listener - Method 1</title> 
+</head>
+<body>
+	<img src="https://313ct818yszd3xd6xa2z47nm-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/ab-1240x833.jpg" onclick="mouse_click()" onmouseover="mouse_over()" ondblclick="double_click()" onmouseout="mouse_out()">
+
+	<script>
+		function mouse_click(){
+			console.log("mouse_click"); 
+		}
+
+		function mouse_over(){
+			console.log("mouse_over");
+		}
+
+		function double_click(){
+			console.log("double_click");
+		}
+
+		function mouse_out(){
+			console.log("mouse_out");
+		}
+
+		//Method 1 to do Mouse Event Listener
+		//1. declare all the "events" inside <img>
+		//2. write functions
+		//3. downside for this method is the HTML and function programs have to be in together.
+
+	</script>
+</body>

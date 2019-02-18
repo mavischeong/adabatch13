@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mouse Event Listener - Method 2</title>
+</head>
+<body>
+	<img id = "image" src="https://313ct818yszd3xd6xa2z47nm-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/ab-1240x833.jpg">
+
+	<script>
+		var img = document.getElementById("image");
+		img.addEventListener("click",mouse_click,false);
+		img.addEventListener("dblclick",double_click,false);
+		img.addEventListener("mouseout",mouse_out,false);
+		img.addEventListener("mouseover",mouse_over,false);
+
+		function mouse_click(){
+			console.log("mouse_click"); 
+		}
+
+		function mouse_over(){
+			console.log("mouse_over");
+		}
+
+		function double_click(){
+			console.log("double_click");
+		}
+
+		function mouse_out(){
+			console.log("mouse_out");
+		}
+	
+
+		//method 3 to do Mouse Event Listener. 
+		//1. same as method 2, no more declaration in <img> in order to seperate the functions developers and html developers.
+		//2. same as method 2, declare "id" in <img>: <img id="image">
+		//3. make the declaration with another format : img.onmouseover = mouse_over (remember to add "on" on every event)
+		//4. give a function on every event.
+	</script>
+</body>
