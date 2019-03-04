@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX POST</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+	
+	var data =   {
+  	"data":[{
+  		"id": "5",
+        "name": "I am Added from HTML",
+        "phone": "0192432293",
+        "email": "hey@yahoo.com"
+  	}]
+  };
+
+  $.post("https://sheetdb.io/api/v1/6thina3sx3hiu",data,
+  		function(result,status){
+  			console.log("Result:" + result + "\nStatus:" + status);
+  		})
+</script>
+
+</body>
+</html>

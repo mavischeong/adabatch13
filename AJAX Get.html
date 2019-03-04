@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALAX Get</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<script> //below is how to retrive data thru API 
+		$(document).ready(function(){
+			$.ajax({url:"https://randomuser.me/api",
+				success:function(result){
+					document.write(JSON.stringify(result));
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+

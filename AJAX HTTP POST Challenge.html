@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Challenge 1: AJAX HTTP POST</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<form>
+		ID:<br>
+		<input type="text" id="id" name="id"><br>
+		Name:<br>
+		<input type="text" id="name" name="name"><br>
+		Phone:<br>
+		<input type="number" id="phone" name="phone"><br>
+		Email Address:<br>
+		<input type="text" id="email" name="email"><br>
+	</form>
+
+	<button onclick="sendData()">POST</button>
+
+<script>
+	//another way to create form is:<input type="text" id="id" placeholder="ID">
+	function sendData(){
+
+		var data = {
+  	"data":[{
+  		"id": $("#id").val(),
+        "name": $("#name").val(),
+        "phone": $("#phone").val(),
+        "email": $("#email").val()
+  	}]
+  };
+
+  $.post("https://sheetdb.io/api/v1/pf6o09cs4ny4s",data,
+  		function(result,status){
+  			console.log("Result:" + result + "\nStatus:" + status);
+  		})
+	}
+</script>
+</body>
+</html>

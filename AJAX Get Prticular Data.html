@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ALAX Get Particular Data</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<p id="name"></p>
+	<p id="email"></p>
+	<p id="phone"></p>
+	<p id="dob"></p>
+	<p id="address"></p>
+	<img id="image"></img>
+	<script>
+		$(document).ready(function(){
+			$.ajax({url:"https://randomuser.me/api",
+				success:function(res){
+					//document.write(JSON.stringify(res));
+					var name = res.results[0].name.first + " " + res.results[0].name.last;
+					var email = res.results[0].email;
+					var phone_number = res.results[0].phone;
+					var date_of_birth = res.results[0].dob.date;
+					var address = res.results[0].location.street + " " + res.results[0].location.city + " " + res.results[0].location.state + " " + res.results[0].location.postcode;
+					var image = res.results[0].picture.thumbnail;
+					$("p#name").text("Name:" + name);
+					$("p#email").text("E-mail:" + email);
+					$("p#phone").text("Phone Number:" + phone_number);
+					$("p#dob").text("Date Of Birth:" + date_of_birth);
+					$("p#address").text("Address:" + address);
+					$("img#image").attr("src","https://randomuser.me/api/portraits/thumb/men/37.jpg",);
+
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
+
