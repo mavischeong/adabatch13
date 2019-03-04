@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+</head>
+<body>
+
+	<div id="example"></div>
+	<h1>My To Do List</h1>
+	<label for="item">Enter a new item:</label>
+	<input type="text" name="item" id="item">
+	<button onclick="addItem()">Add Item</button>
+
+	<ul id="list"></ul>
+
+	<script>
+	function addItem(){
+		var itemName = $("#item").val();
+		$("#list").append("<li>" + itemName + " <button> delete/edit </button></li>");
+	}
+
+	</script>
+
+	<!-- script above is the shorter version for DOM Manipulation-My To Do List.html script by using JavaScript
+
+	<script>
+	function add_item(){
+		var item_name = document.getElementById("item").value; 
+		var list = document.getElementById("lists");
+
+		var node = document.createElement("li");
+		node.innerHTML = item_name + " <button>delete/edit</button>";
+		list.appendChild(node);
+	}
+</script> -->
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Hide and Show the Call Back</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Hide and Show the Call Back</h1>
+	<p>Paragraph 1</p>
+	<p>Click HIDE to hide</p>
+	<p>Click SHOW to show</p>
+	<button id="hide">HIDE</button>
+	<button id="show">SHOW</button>
+
+	<script>
+		
+		$("#hide").click(function(){
+			$("p").hide("slow",function(){ //start the call back after ".hide". 
+				alert("The paragraph is hidden"); //the alert pop out few times as there are a few paragraphs
+			});
+		});
+
+		$("#show").click(function(){
+			$("p").show(2000,function(){
+				alert("The paragraph is shown");
+			});
+		});
+	</script>
+
+</body>
+</html>

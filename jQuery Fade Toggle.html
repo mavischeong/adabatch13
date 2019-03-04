@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Fade Toggle</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>jQuery Fade Toogle</h1>
+	<p>Paragraph 1</p>
+	<p>Click HIDE to hide</p>
+	<p>Click SHOW to show</p>
+	<button id="hide">HIDE</button>
+	<button id="show">SHOW</button>
+	<button id="fadetoggle">FADE TOGGLE</button>
+
+	<script>
+		
+		$("#hide").click(function(){
+			$("p").hide();
+		});
+
+		$("#show").click(function(){
+			$("p").show();
+		});
+
+		$("#fadetoggle").click(function(){
+			$("p:eq(0)").fadeToggle(); //p:eq(0) equal to the first <p>
+			$("p:eq(1)").fadeToggle("slow");
+			$("p:eq(2)").fadeToggle(3000);
+		});
+	</script>
+
+</body>
+</html>
